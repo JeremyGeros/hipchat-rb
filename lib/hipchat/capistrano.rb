@@ -68,6 +68,7 @@ Capistrano::Configuration.instance(:must_exist).load do
     end
 
     def deployment_name
+      return "Masterr"
       if fetch(:branch, nil)
         name = "#{application}/#{branch}"
         name += " (revision #{real_revision[0..7]})" if real_revision
